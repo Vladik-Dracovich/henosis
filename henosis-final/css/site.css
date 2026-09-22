@@ -1,0 +1,63 @@
+:root{
+ --bg:#070a08;--panel:#0b100c;--panel2:#0e1510;--green:#9cc59f;--bright:#d0ead0;
+ --dim:#66836a;--faint:#344638;--line:#26362a;--amber:#c2aa76;--white:#d8ded8;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;background:var(--bg)}
+body{margin:0;color:var(--green);background:
+ radial-gradient(circle at 50% 0,#101b13 0,transparent 36rem),
+ var(--bg);font-family:"DejaVu Sans Mono","Liberation Mono",Consolas,monospace;
+ font-size:15px;line-height:1.65}
+::selection{background:var(--green);color:var(--bg)}
+a{color:inherit}
+.crt{position:fixed;inset:0;z-index:50;pointer-events:none;opacity:.11;
+ background:repeating-linear-gradient(to bottom,transparent 0,transparent 2px,#000 3px)}
+.bar{height:48px;position:sticky;top:0;z-index:20;display:grid;
+ grid-template-columns:1fr auto 1fr;align-items:center;padding:0 max(18px,calc((100vw - 1040px)/2));
+ border-bottom:1px solid var(--line);background:rgba(7,10,8,.94);backdrop-filter:blur(8px);
+ font-size:12px;letter-spacing:.08em}
+.brand{text-decoration:none;color:var(--bright);font-weight:bold}.lambda{color:var(--amber)}
+.bar nav{display:flex;gap:26px}.bar nav a{text-decoration:none;color:var(--dim)}
+.bar nav a:hover{color:var(--bright)}.mode{text-align:right;color:var(--faint)}
+.terminal{width:min(960px,calc(100% - 32px));margin:0 auto;border-left:1px solid var(--line);border-right:1px solid var(--line);background:rgba(7,12,8,.55)}
+.intro{padding:clamp(58px,10vw,110px) clamp(22px,6vw,70px) 80px;border-bottom:1px solid var(--line)}
+.prompt{color:var(--dim);font-size:13px}.prompt span:first-child{color:var(--amber)}
+.response{margin:3px 0;color:var(--faint);font-size:12px}.response b{color:var(--green);font-weight:normal}
+h1{font-size:clamp(44px,10vw,96px);line-height:1;margin:42px 0 12px;color:var(--bright);letter-spacing:.08em;font-weight:500}
+.cursor{font-size:.7em;color:var(--green);animation:blink 1.05s steps(1) infinite}
+.tagline{color:var(--amber);letter-spacing:.25em;font-size:12px}
+.lede{max-width:670px;margin:30px 0;color:var(--white);font-size:clamp(16px,2vw,20px);line-height:1.7}
+.sexpr,pre{border:1px solid var(--line);background:#050806;padding:18px;overflow:auto;color:var(--dim);font:13px/1.65 "DejaVu Sans Mono","Liberation Mono",monospace}
+.sexpr{max-width:560px;margin-top:34px}.sexpr pre{border:0;padding:0;margin:0;background:none}
+.section{padding:70px clamp(22px,6vw,70px);border-bottom:1px solid var(--line);scroll-margin-top:48px}
+.section-head{display:grid;grid-template-columns:42px auto 1fr;gap:14px;align-items:center;margin-bottom:36px}
+.section-head span{color:var(--amber)}.section-head h2{font-size:14px;letter-spacing:.18em;color:var(--bright);margin:0}
+.section-head i{text-align:right;font-style:normal;font-size:10px;letter-spacing:.14em;color:var(--faint)}
+.project,.book,.about{border:1px solid var(--line);background:linear-gradient(135deg,rgba(14,21,16,.92),rgba(7,11,8,.92));padding:clamp(22px,4vw,38px);margin-top:18px;box-shadow:inset 3px 0 0 #17241a}
+.project-meta{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.project-meta span,.skills span{font-size:10px;border:1px solid var(--line);padding:4px 8px;color:var(--dim)}
+.project-meta .status{margin-left:auto;color:var(--amber)}
+h3{font-size:clamp(24px,4vw,36px);letter-spacing:.06em;color:var(--bright);font-weight:500;margin:0}
+.subtitle{color:var(--amber);margin:4px 0 24px;font-size:12px;letter-spacing:.05em}
+.project>p:not(.subtitle),.book>p:not(.subtitle),.about>p{max-width:720px;color:#91a593}
+.project pre{margin:28px 0 0}
+.book-label{font-size:10px;color:var(--dim);letter-spacing:.16em;margin-bottom:18px}
+.coming{display:inline-block;margin-top:25px;padding:8px 12px;border:1px solid var(--amber);color:var(--amber);letter-spacing:.14em;font-size:11px}
+.skills{display:flex;flex-wrap:wrap;gap:8px;margin:28px 0 36px}
+.github{border-top:1px dashed var(--line);padding-top:28px;display:flex;gap:30px;justify-content:space-between;align-items:center}
+.github .label{display:block;font-size:9px;letter-spacing:.16em;color:var(--faint)}
+.github strong{display:block;color:var(--bright);margin-top:3px}.github p{margin:2px 0;color:var(--dim);font-size:11px}
+.github a{flex:none;text-decoration:none;border:1px solid var(--line);padding:10px 13px;color:var(--green);font-size:11px;letter-spacing:.08em}
+.github a:hover{border-color:var(--green);color:var(--bright);background:#0d160f}
+.end{padding:35px clamp(22px,6vw,70px)}
+footer{width:min(960px,calc(100% - 32px));margin:0 auto;padding:20px 0 38px;display:flex;justify-content:space-between;color:var(--faint);font-size:9px;letter-spacing:.1em}
+@keyframes blink{50%{opacity:0}}
+@media(max-width:650px){
+ body{font-size:14px}.bar{grid-template-columns:1fr auto;padding:0 16px}.bar nav{gap:14px}.mode{display:none}
+ .terminal{width:100%;border-left:0;border-right:0}.intro,.section{padding-left:20px;padding-right:20px}
+ h1{font-size:48px;letter-spacing:.04em}.tagline{letter-spacing:.12em}
+ .section-head{grid-template-columns:32px auto}.section-head i{display:none}
+ .project-meta .status{margin-left:0}.github{align-items:flex-start;flex-direction:column;gap:15px}
+ footer{width:100%;padding:18px 20px 35px;gap:10px;flex-direction:column}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.cursor{animation:none}}

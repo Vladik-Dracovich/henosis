@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="HENOSIS — software, systems, writing, and independent projects by Donald Pepper.">
+<title>HENOSIS</title>
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<div class="crt" aria-hidden="true"></div>
+
+<header class="bar">
+  <a class="brand" href="#top"><span class="lambda">λ</span> HENOSIS</a>
+  <nav aria-label="Primary navigation">
+    <a href="#work">WORK</a>
+    <a href="#writing">WRITING</a>
+    <a href="#about">ABOUT</a>
+  </nav>
+  <span class="mode">CL · UTF-8</span>
+</header>
+
+<main id="top" class="terminal">
+<section class="intro">
+  <div class="prompt"><span>CL-USER&gt;</span> (load "henosis")</div>
+  <p class="response">; loading interconnected systems...</p>
+  <p class="response">; status: <b>ONLINE</b></p>
+  <h1>HENOSIS<span class="cursor">█</span></h1>
+  <p class="tagline">THE UNION OF NOUS AND EIDOS</p>
+  <p class="lede">A personal hub for software, systems, writing, and independent experiments.</p>
+  <div class="sexpr">
+<pre>(defsite henosis
+  :author "Donald Pepper"
+  :domains '(software systems writing)
+  :status :online)</pre>
+  </div>
+</section>
+
+<section id="work" class="section">
+  <div class="section-head"><span>01</span><h2>WORK</h2><i>ACTIVE PROJECTS</i></div>
+
+  <article class="project">
+    <div class="project-meta"><span>COMMON LISP</span><span>CLX</span><span>X11</span><span class="status">DEVELOPMENT</span></div>
+    <h3>MOSS</h3>
+    <p class="subtitle">Malleable Object Screen System</p>
+    <p>A live-programmable X11 window manager written in Common Lisp, designed around a malleable runtime environment rather than a fixed desktop configuration.</p>
+    <pre>(moss
+  :language 'common-lisp
+  :display 'x11
+  :interface 'clx
+  :philosophy :malleable)</pre>
+  </article>
+
+  <article class="project">
+    <div class="project-meta"><span>GO</span><span>LARAVEL</span><span>S3</span><span class="status">DEVELOPMENT</span></div>
+    <h3>ABZU NEXUS</h3>
+    <p class="subtitle">Linux-first cloud storage</p>
+    <p>An independent cloud storage platform centered on a Go backend, a Laravel/Livewire web interface, and S3-compatible object storage.</p>
+    <pre>(abzu-nexus
+  :backend 'go
+  :frontend '(laravel livewire)
+  :storage 's3-compatible
+  :status :development)</pre>
+  </article>
+</section>
+
+<section id="writing" class="section">
+  <div class="section-head"><span>02</span><h2>WRITING</h2><i>FORTHCOMING</i></div>
+  <article class="book">
+    <div class="book-label">MANUSCRIPT // IN DEVELOPMENT</div>
+    <h3>THE BOOK OF EMANATIONS</h3>
+    <p class="subtitle">Ancient religion · cosmology · sacred language · theurgy</p>
+    <p>An independent work exploring divine emanation, ancient theology, sacred language, and the ascent of the soul through Sumerian, Hellenic, Egyptian, and later philosophical traditions.</p>
+    <div class="coming">[ COMING SOON ]</div>
+  </article>
+</section>
+
+<section id="about" class="section">
+  <div class="section-head"><span>03</span><h2>ABOUT</h2><i>USER PROFILE</i></div>
+  <article class="about">
+    <div class="prompt"><span>CL-USER&gt;</span> (describe 'donald-pepper)</div>
+    <h3>DONALD PEPPER</h3>
+    <p>Linux systems, programming, independent software, and writing. Current technical interests include Common Lisp, C/C++, Java, Go, Unix-like systems, graphics, and infrastructure.</p>
+    <div class="skills"><span>COMMON LISP</span><span>C</span><span>C++</span><span>JAVA</span><span>GO</span><span>LINUX / UNIX</span></div>
+
+    <div class="github">
+      <div>
+        <span class="label">PUBLIC CODE ARCHIVE</span>
+        <strong>Vladik-Dracovich</strong>
+        <p>Other repositories, experiments, and code.</p>
+      </div>
+      <a href="https://github.com/Vladik-Dracovich" target="_blank" rel="noopener">EXPLORE GITHUB ↗</a>
+    </div>
+  </article>
+</section>
+
+<section class="end">
+  <div class="prompt"><span>CL-USER&gt;</span> <span class="cursor">█</span></div>
+</section>
+</main>
+
+<footer>
+  <span>HENOSIS</span>
+  <span>© <span id="year"></span> DONALD PEPPER</span>
+  <span>SBCL-MINDED · STATIC HTML</span>
+</footer>
+<script src="js/site.js"></script>
+</body>
+</html>
