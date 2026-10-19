@@ -1,0 +1,18 @@
+HENOSIS — PHOTOGRAPH CREDITS AND LICENSING
+
+The images are downloaded by download_photos.py from Wikimedia Commons, then resized and recompressed. Website CSS additionally applies darkening, tinting and feathered masks.
+
+ANU — Commentary on Enuma Anu Enlil, tablet 5 (Metropolitan Museum of Art, accession 86.11.503). CC0 / public domain.
+https://commons.wikimedia.org/wiki/File:Cuneiform_tablet-_commentary_on_Enuma_Anu_Enlil,_tablet_5_MET_DP-442-001.jpg
+
+ENLIL — Seated clay figure identified as Enlil, Nippur, Iraq Museum. Verify license and attribution on file page before public deployment.
+https://commons.wikimedia.org/wiki/File:God_Enlil,_seated,_from_Nippur,_Iraq._1800-1600_BCE._Iraq_Museum.jpg
+
+ENKI — Seated statue of Ea holding a cup, from near Nasiriyah, Iraq Museum. Photographer Osama Shukir Muhammed Amin. Check the file page for the precise reuse terms.
+https://commons.wikimedia.org/wiki/File:God_Ea,_seated,_holding_a_cup._From_Nasiriyah,_Iraq,_2004-1595_BCE._Iraq_Museum.jpg
+
+NABU — Profile photograph of colossal Nabu statue from Nimrud, Iraq Museum. Photo © Osama Shukir Muhammed Amin, licensed CC BY-SA 4.0. Changes: resized/recompressed and CSS tint/darkening/feathering.
+https://commons.wikimedia.org/wiki/File:En_profile._Statue_of_god_Nabu,_from_Nimrud,_Iraq,_8th_century_BCE._Iraq_Museum.jpg
+https://creativecommons.org/licenses/by-sa/4.0/
+
+IMPORTANT: CC BY-SA licensed adapted imagery carries share-alike requirements. Review licensing for each source before publishing.

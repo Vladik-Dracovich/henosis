@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="HENOSIS — software, systems, writing, and independent projects by Donald Pepper.">
+<title>HENOSIS</title>
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<div class="crt" aria-hidden="true"></div>
+<div class="artifact-atmosphere" aria-hidden="true">
+  <figure class="artifact anu"><div class="artifact-image"><img loading="lazy" src="assets/anu.jpg" data-remote="https://commons.wikimedia.org/wiki/Special:FilePath/Cuneiform%20tablet-%20commentary%20on%20Enuma%20Anu%20Enlil%2C%20tablet%205%20MET%20DP-442-001.jpg?width=960" alt="Anu celestial omen tablet" onerror="if(this.dataset.remote){this.src=this.dataset.remote;delete this.dataset.remote}else{this.closest('.artifact').hidden=true}"></div></figure>
+  <figure class="artifact enlil"><div class="artifact-image"><img loading="lazy" src="assets/enlil.jpg" data-remote="https://commons.wikimedia.org/wiki/Special:FilePath/God%20Enlil%2C%20seated%2C%20from%20Nippur%2C%20Iraq.%201800-1600%20BCE.%20Iraq%20Museum.jpg?width=960" alt="Seated Enlil sculpture" onerror="if(this.dataset.remote){this.src=this.dataset.remote;delete this.dataset.remote}else{this.closest('.artifact').hidden=true}"></div></figure>
+  <figure class="artifact enki"><div class="artifact-image"><img loading="lazy" src="assets/enki.jpg" data-remote="https://commons.wikimedia.org/wiki/Special:FilePath/God%20Ea%2C%20seated%2C%20holding%20a%20cup.%20From%20Nasiriyah%2C%20Iraq%2C%202004-1595%20BCE.%20Iraq%20Museum.jpg?width=960" alt="Seated Ea Enki sculpture" onerror="if(this.dataset.remote){this.src=this.dataset.remote;delete this.dataset.remote}else{this.closest('.artifact').hidden=true}"></div></figure>
+  <figure class="artifact nabu"><div class="artifact-image"><img loading="lazy" src="assets/nabu.jpg" data-remote="https://commons.wikimedia.org/wiki/Special:FilePath/En%20profile.%20Statue%20of%20god%20Nabu%2C%20from%20Nimrud%2C%20Iraq%2C%208th%20century%20BCE.%20Iraq%20Museum.jpg?width=960" alt="Nabu statue from Nimrud" onerror="if(this.dataset.remote){this.src=this.dataset.remote;delete this.dataset.remote}else{this.closest('.artifact').hidden=true}"></div></figure>
+</div>
+
+<header class="bar">
+  <a class="brand" href="#top"><span class="lambda">λ</span> HENOSIS</a>
+  <nav aria-label="Primary navigation">
+    <a href="#work">WORK</a>
+    <a href="#research">NOTES & RESEARCH</a>
+    <a href="#about">ABOUT</a>
+  </nav>
+  <span class="mode">CL · UTF-8</span>
+</header>
+
+<main id="top" class="terminal">
+<section class="intro">
+  <div class="prompt"><span>CL-USER&gt;</span> (load "henosis")</div>
+  <p class="response">; loading interconnected systems...</p>
+  <p class="response">; status: <b>ONLINE</b></p>
+  <h1>HENOSIS<span class="cursor">█</span></h1>
+  <p class="tagline">THE UNION OF NOUS AND EIDOS</p>
+  <p class="lede">A personal hub for software, systems, research, and independent experiments.</p>
+  <div class="sexpr">
+<pre>(defsite henosis
+  :author "Donald Pepper"
+  :domains '(software systems research)
+  :status :online)</pre>
+  </div>
+</section>
+
+<section id="work" class="section">
+  <div class="section-head"><span>01</span><h2>WORK</h2><i>ACTIVE PROJECTS</i></div>
+  <p class="work-note">The projects listed here are developed or planned locally and privately until completion and release. These are technical directions, not public downloads.</p>
+
+  <article class="project">
+    <div class="project-meta"><span>COMMON LISP</span><span>DYNAMIC WINDOW MANAGEMENT</span><span class="status">DEVELOPMENT</span></div>
+    <h3>MOSS</h3>
+    <p class="subtitle">Malleable Object Screen System</p>
+    <p>A Common Lisp window manager built around dynamic window control, interactive reconfiguration, and a live Lisp environment in which behavior can be inspected and changed while the system runs.</p>
+    <pre>(moss
+  :language 'common-lisp
+  :layout :dynamic
+  :configuration :live
+  :runtime :malleable)</pre>
+    <p class="project-private">LOCAL DEVELOPMENT · NOT YET RELEASED</p>
+    <a class="project-link" href="projects/moss.html">READ TECHNICAL OVERVIEW <span aria-hidden="true">↗</span></a>
+  </article>
+
+  <article class="project">
+    <div class="project-meta"><span>GO</span><span>LARAVEL</span><span>S3</span><span class="status">DEVELOPMENT</span></div>
+    <h3>ABZU NEXUS</h3>
+    <p class="subtitle">Linux-first cloud storage</p>
+    <p>An independent cloud storage platform centered on a Go backend, a Laravel/Livewire web interface, and S3-compatible object storage.</p>
+    <pre>(abzu-nexus
+  :backend 'go
+  :frontend '(laravel livewire)
+  :storage 's3-compatible
+  :status :development)</pre>
+    <p class="project-private">LOCAL DEVELOPMENT · NOT YET RELEASED</p>
+    <a class="project-link" href="projects/abzu-nexus.html">READ TECHNICAL OVERVIEW <span aria-hidden="true">↗</span></a>
+  </article>
+
+  <article class="project">
+    <div class="project-meta"><span>JAVA</span><span>HEX EDITING</span><span>HASH ANALYSIS</span><span class="status">CONCEPT</span></div>
+    <h3>NISABA</h3>
+    <p class="subtitle">Binary inspection and cryptographic analysis</p>
+    <p>A Java desktop toolkit for hexadecimal editing, binary inspection, file hashing, and authorized password-hash auditing.</p>
+    <pre>(nisaba
+  :language 'java
+  :tools '(hex-editor binary-inspection hashing)
+  :status :concept)</pre>
+    <p class="project-private">LOCAL DEVELOPMENT · NOT YET RELEASED</p>
+    <a class="project-link" href="projects/nisaba.html">READ TECHNICAL OVERVIEW <span aria-hidden="true">↗</span></a>
+  </article>
+
+  <article class="project">
+    <div class="project-meta"><span>COMPILERS</span><span>LANGUAGE DESIGN</span><span class="status">CONCEPT</span></div>
+    <h3>THE COMPILER PROJECT</h3>
+    <p class="subtitle">An experimental language implementation</p>
+    <p>A locally developed compiler project exploring language syntax, parsing, intermediate representations, semantic analysis, and native or portable code generation. The language and toolchain design are still being defined.</p>
+    <pre>(compiler
+  :frontend '(lexer parser semantic-analysis)
+  :middle-end '(intermediate-representation passes)
+  :backend :under-design
+  :status :concept)</pre>
+    <p class="project-private">PLANNED LOCAL DEVELOPMENT · NOT YET RELEASED</p>
+    <a class="project-link" href="projects/compiler.html">READ TECHNICAL OVERVIEW <span aria-hidden="true">↗</span></a>
+  </article>
+</section>
+
+<section id="research" class="section">
+  <div class="section-head"><span>02</span><h2>NOTES &amp; RESEARCH</h2><i>INDEPENDENT INQUIRY</i></div>
+  <article class="book research">
+    <div class="book-label">FIELD NOTES // RESEARCH ARCHIVE</div>
+    <h3>NOTES &amp; RESEARCH</h3>
+    <p class="subtitle">Philosophy · Writing</p>
+    <p>An independent collection of philosophy and writing.</p>
+    <div class="research-tags"><span>PHILOSOPHY</span><span>WRITING</span></div>
+    <div class="script-portals" aria-label="Ancient-script introductions"><a class="script-portal" href="threshold.html" aria-label="Open Sumerian Threshold" title="Sumerian · The Threshold"><span lang="sux" class="portal-glyph">𒀭</span><small>SUMERIAN</small></a><a class="script-portal" href="georgian.html" aria-label="Open Georgian primordial fire introduction" title="Georgian · Primordial Fire"><span lang="ka" class="portal-glyph georgian-glyph">Ⴀ</span><small>GEORGIAN</small></a><a class="script-portal" href="greek.html" aria-label="Open Ancient Greek Neoplatonic introduction" title="Ancient Greek · The Emanations"><span lang="grc" class="portal-glyph greek-glyph">Φ</span><small>GREEK</small></a><a class="script-portal" href="arabian.html" aria-label="Open Ancient Arabian deities introduction" title="Ancient Arabia · The Names of the Desert"><span lang="ar" class="portal-glyph arabic-glyph">𐩠</span><small>ARABIAN</small></a></div>
+  </article>
+</section>
+
+<section id="about" class="section">
+  <div class="section-head"><span>03</span><h2>ABOUT</h2><i>USER PROFILE</i></div>
+  <article class="about">
+    <div class="prompt"><span>CL-USER&gt;</span> <span class="gold-expression">(describe 'donald-pepper)</span></div>
+    <h3>DONALD PEPPER</h3>
+    <p>Linux systems, programming, independent software, and writing. Current technical interests include Common Lisp, C/C++, Java, Go, Unix-like systems, graphics, and infrastructure.</p>
+    <div class="skills"><span>COMMON LISP</span><span>C</span><span>C++</span><span>JAVA</span><span>GO</span><span>LINUX / UNIX</span></div>
+
+    <div class="github">
+      <div>
+        <span class="label">PUBLIC CODE ARCHIVE</span>
+        <strong>Vladik-Dracovich</strong>
+        <p>Other repositories, experiments, and code.</p>
+      </div>
+      <a href="https://github.com/Vladik-Dracovich" target="_blank" rel="noopener">EXPLORE GITHUB ↗</a>
+    </div>
+  </article>
+</section>
+
+<section class="end">
+  <div class="prompt"><span>CL-USER&gt;</span> <span class="cursor">█</span></div>
+</section>
+</main>
+
+<footer>
+  <span>HENOSIS</span>
+  <span>© <span id="year"></span> DONALD PEPPER</span>
+  <span>SBCL-MINDED · STATIC HTML</span>
+</footer>
+<script src="js/site.js"></script>
+</body>
+</html>

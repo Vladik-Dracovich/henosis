@@ -1,0 +1,1 @@
+Optional local images: anu.jpg, enlil.jpg, enki.jpg, nabu.jpg. Without them, the website tries Wikimedia Commons image URLs. See PHOTO_CREDITS.txt.

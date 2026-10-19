@@ -1,0 +1,8 @@
+HENOSIS / THE THRESHOLD / TEXTUAL SOURCES
+
+The transliteration panel uses attested Sumerian excerpts, not newly invented Sumerian:
+- Enki’s Journey to Nippur, lines 1, 2, 4, 5 (CDLI): https://cdli.earth/inscriptions/2376169
+- Enki and the World Order, lines 1, 3 (ETCSL): https://etcsl.orinst.ox.ac.uk/edition2/etcslgloss.php?charenc=&lookup=c113.1&sn=OFF
+
+The English three-paragraph composition is a thematic adaptation of the sources, not a word-for-word translation.
+The cuneiform view is a curated sequence of Unicode signs and divine names; it is NOT yet a verified sign-by-sign transcription of the quoted lines. A fully accurate cuneiform rendering requires sign-value and manuscript-variant checking by a Sumerian specialist.
