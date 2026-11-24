@@ -1,0 +1,242 @@
+/* Henosis themes. All nine are CSS-only palettes; the chosen theme persists. */
+:root,html[data-theme="gold"]{
+ --t-bg:#050912;--t-panel:#0b1425;--t-text:#b9c8df;--t-muted:#899bb8;
+ --t-faint:#637795;--t-line:#25324a;--t-accent:#f0c76d;--t-bright:#f4d99b;
+ --t-code:#080e1b;--t-glow:rgba(240,199,109,.24);--t-rgb:240,199,109;
+}
+html[data-theme="glitch"]{
+ --t-bg:#020704;--t-panel:#06120a;--t-text:#a5dcb1;--t-muted:#79b78a;
+ --t-faint:#4b7c58;--t-line:#173b22;--t-accent:#54ff87;--t-bright:#c1ffd1;
+ --t-code:#010502;--t-glow:rgba(66,255,122,.29);--t-rgb:84,255,135;
+}
+html[data-theme="zetsieri"]{
+ --t-bg:#0c0915;--t-panel:#161126;--t-text:#c8bfdc;--t-muted:#a49abf;
+ --t-faint:#786e95;--t-line:#342847;--t-accent:#c5a2ff;--t-bright:#e4d8ff;
+ --t-code:#0b0813;--t-glow:rgba(177,130,255,.25);--t-rgb:197,162,255;
+}
+html[data-theme="gruvbox"]{
+ --t-bg:#282828;--t-panel:#32302f;--t-text:#d5c4a1;--t-muted:#bdae93;
+ --t-faint:#928374;--t-line:#504945;--t-accent:#fabd2f;--t-bright:#ebdbb2;
+ --t-code:#1d2021;--t-glow:rgba(250,189,47,.16);--t-rgb:250,189,47;
+}
+html,body{background:var(--t-bg)!important;color:var(--t-text)!important}
+body{background-image:radial-gradient(ellipse at 85% 8%,rgba(var(--t-rgb),.055),transparent 45%)!important}
+.bar,.top{background:var(--t-bg)!important;border-color:var(--t-line)!important}
+.terminal{background:transparent!important;border-color:var(--t-line)!important}
+.brand,.lambda,h1,.prompt span:first-child,.prompt .gold-expression,.gold-expression,.cursor,.chamber h1{color:var(--t-accent)!important}
+h1,.chamber h1{text-shadow:0 0 23px var(--t-glow)!important}
+.tagline,.subtitle,.section-head span,.detail-sub,.detail-copy h2,.detail-copy p::first-letter,.verse-head{color:var(--t-accent)!important}
+.section-head h2,h3,.github strong{color:var(--t-bright)!important}
+.mode,.response,.section-head i,.github .label,.footnote,.controls #state{color:var(--t-faint)!important}
+.bar nav a,.prompt,.work-note,.github p,.subhead,.top{color:var(--t-muted)!important}
+.lede,.project>p:not(.subtitle),.book>p:not(.subtitle),.about>p,.detail-copy p,.english,.passage{color:var(--t-text)!important}
+.project,.book,.about{background:var(--t-panel)!important;border-color:var(--t-line)!important;box-shadow:inset 2px 0 0 var(--t-accent)!important}
+.section,.intro,.detail-intro,.github,footer,.end,.top{border-color:var(--t-line)!important}
+.sexpr,pre{background:var(--t-code)!important;color:var(--t-text)!important;border-color:var(--t-line)!important}
+.project-meta span,.skills span,.research-tags span{border-color:var(--t-line)!important;color:var(--t-muted)!important}
+.project-meta .status,.project-private,.detail-status{color:var(--t-accent)!important}
+.project-link,.back-link,.github a,.return,.eyebrow,.footnote a{color:var(--t-accent)!important;border-color:var(--t-line)!important}
+.project-link:hover,.back-link:hover,.github a:hover,.bar nav a:hover,.return:hover{color:var(--t-bright)!important;border-color:var(--t-accent)!important}
+.script-portal{background:var(--t-panel)!important;border-color:var(--t-line)!important}
+.script-portal:hover{border-color:var(--t-accent)!important}
+.portal-glyph,.georgian-glyph,.greek-glyph,.arabic-glyph{color:var(--t-accent)!important;text-shadow:0 0 18px var(--t-glow)!important}
+.script-portal small{color:var(--t-muted)!important}
+.chamber:before{background:radial-gradient(ellipse,rgba(var(--t-rgb),.06),transparent 65%)!important}
+.grain{opacity:.08!important}
+.inscription,.cuneiform,.georgian-text,.greek-text,.arabian-text,.transliteration{color:var(--t-text)!important;text-shadow:0 0 16px var(--t-glow)!important}
+.controls button{background:var(--t-panel)!important;color:var(--t-accent)!important;border-color:var(--t-accent)!important}
+.controls button:hover{color:var(--t-bright)!important}
+.theme-picker{display:flex;align-items:center;gap:7px;justify-self:end;font-size:10px;letter-spacing:.08em;color:var(--t-muted)}
+.theme-picker label{white-space:nowrap}
+.theme-picker select{max-width:155px;border:1px solid var(--t-line);background:var(--t-panel);color:var(--t-accent);font:11px/1.3 'DejaVu Sans Mono',monospace;padding:7px 8px;border-radius:3px;cursor:pointer}
+.theme-picker select:focus-visible{outline:2px solid var(--t-accent);outline-offset:2px}
+.bar{grid-template-columns:auto 1fr auto!important;gap:18px!important;padding-left:max(18px,calc((100vw - 1040px)/2))!important;padding-right:max(18px,calc((100vw - 1040px)/2))!important}
+.bar nav{justify-content:center!important;gap:clamp(9px,2vw,26px)!important}
+.bar .mode{display:none!important}
+.top{align-items:center!important}
+@media(max-width:700px){
+ .bar{height:auto!important;min-height:55px;grid-template-columns:1fr auto!important;row-gap:7px!important;padding:10px 14px!important}
+ .bar nav{grid-column:1/-1;grid-row:2;justify-content:flex-start!important;flex-wrap:wrap}
+ .bar .theme-picker{grid-column:2;grid-row:1}
+ .theme-picker label{display:none}
+ .theme-picker select{max-width:128px;font-size:10px}
+ .top{flex-wrap:wrap;gap:9px!important;padding:13px 18px!important}
+ .top .theme-picker{margin-left:auto}
+}
+@media(prefers-reduced-motion:reduce){.crt{display:none}}
+
+/* v2.3: additional editor-inspired palettes */
+html[data-theme="monokai"]{
+ --t-bg:#272822;--t-panel:#30312b;--t-text:#f8f8f2;--t-muted:#b7b8a8;
+ --t-faint:#909183;--t-line:#494a42;--t-accent:#a6e22e;--t-bright:#f92672;
+ --t-code:#1e1f1c;--t-glow:rgba(166,226,46,.18);--t-rgb:166,226,46;
+}
+html[data-theme="solarized-light"]{
+ --t-bg:#fdf6e3;--t-panel:#eee8d5;--t-text:#586e75;--t-muted:#657b83;
+ --t-faint:#6d8184;--t-line:#c9c5b6;--t-accent:#b58900;--t-bright:#073642;
+ --t-code:#f6efd9;--t-glow:rgba(181,137,0,.11);--t-rgb:181,137,0;
+ color-scheme:light;
+}
+html[data-theme="oblivion"]{
+ --t-bg:#1e1f1c;--t-panel:#292b25;--t-text:#c8d1bd;--t-muted:#a7b59a;
+ --t-faint:#7f9074;--t-line:#3f4b38;--t-accent:#a4c969;--t-bright:#e5efcd;
+ --t-code:#171914;--t-glow:rgba(164,201,105,.17);--t-rgb:164,201,105;
+}
+/* Header identity block replaces the old defsite snippet and lower GitHub card. */
+.identity{display:flex;align-items:center;gap:16px;margin:36px 0 0;max-width:540px}
+.identity-avatar-link{flex:none;display:block;width:64px;height:64px;border:1px solid var(--t-line);border-radius:50%;overflow:hidden;background:var(--t-panel);text-decoration:none}
+.identity-avatar{width:100%;height:100%;display:block;object-fit:cover}
+.identity-avatar-fallback{width:100%;height:100%;display:none;place-items:center;color:var(--t-accent);font-size:20px;font-weight:700}
+.identity-details{display:flex;flex-direction:column;gap:5px;min-width:0}
+.identity-details strong{color:var(--t-bright);font-size:clamp(15px,2.5vw,20px);font-weight:600;letter-spacing:.025em}
+.identity-details a{color:var(--t-accent);font-size:clamp(10px,1.8vw,13px);text-decoration:none;overflow-wrap:anywhere}
+.identity-details a:hover,.identity-details a:focus-visible{text-decoration:underline}
+.identity~h1{margin-top:28px}
+@media(max-width:450px){.identity{gap:12px}.identity-avatar-link{width:52px;height:52px}}
+/* Make Solarized Light legible even for older fixed-color decorative layers. */
+html[data-theme="solarized-light"] .crt{opacity:.035}
+html[data-theme="solarized-light"] .response b{color:var(--t-accent)!important}
+html[data-theme="solarized-light"] .section-head h2,
+html[data-theme="solarized-light"] h3,
+html[data-theme="solarized-light"] .identity-details strong{color:var(--t-bright)!important}
+html[data-theme="solarized-light"] .prompt,
+html[data-theme="solarized-light"] .prompt span:not(:first-child),
+html[data-theme="solarized-light"] .detail-copy p{color:var(--t-text)!important}
+
+/* v2.4: uniform hacker-terminal typography; preserve historic glyph faces. */
+html,body,button,select,input,textarea,code,pre,.bar,.prompt,.theme-picker select{font-family:'Share Tech Mono','DejaVu Sans Mono','Liberation Mono',monospace!important}
+.portal-glyph{font-family:'Noto Sans Cuneiform','Segoe UI Historic',sans-serif!important}
+.georgian-glyph{font-family:'Noto Sans Georgian','DejaVu Sans',serif!important}
+.greek-glyph{font-family:Georgia,serif!important}
+.arabic-glyph{font-family:'Noto Sans Old South Arabian','Segoe UI Historic',sans-serif!important}
+/* Independent author panel, deliberately separated from the Henosis masthead. */
+.author-section{margin:44px 0 54px;padding:0;border:0!important}
+.identity-card{margin:0!important;max-width:none;width:100%;box-sizing:border-box;display:flex;align-items:center;gap:22px;padding:24px 28px;background:var(--t-panel);border:1px solid var(--t-line);border-left:3px solid var(--t-accent);border-radius:5px;box-shadow:0 12px 36px rgba(0,0,0,.10)}
+.identity-card .identity-avatar-link{width:78px;height:78px}
+.identity-card .identity-details{gap:8px}
+.identity-card .identity-details strong{font-size:clamp(19px,2.8vw,27px);color:var(--t-bright)}
+.identity-card .identity-details a{font-size:13px}
+.identity-bio{margin:0;color:var(--t-text);font-size:clamp(12px,1.5vw,15px);line-height:1.65;max-width:65ch}
+.intro h1{margin-top:28px!important}
+@media(max-width:550px){.author-section{margin:30px 0 42px}.identity-card{padding:18px;gap:14px;align-items:flex-start}.identity-card .identity-avatar-link{width:58px;height:58px}.identity-card .identity-details strong{font-size:19px}}
+
+/* v2.7 — accessible light palettes and complete light-theme color corrections */
+html[data-theme="solarized-light"]{
+ --t-bg:#fdf6e3;--t-panel:#f4ecd8;--t-text:#334e58;--t-muted:#425f68;
+ --t-faint:#526971;--t-line:#b8b2a1;--t-accent:#785b00;--t-bright:#173f4c;
+ --t-code:#eee6d1;--t-glow:rgba(120,91,0,.07);--t-rgb:120,91,0;
+ --t-profile:#253f48;--t-note:#36515b;--t-highlight:#735400;color-scheme:light;
+}
+html[data-theme="github-light"]{
+ --t-bg:#ffffff;--t-panel:#f6f8fa;--t-text:#24292f;--t-muted:#424c58;
+ --t-faint:#586574;--t-line:#d0d7de;--t-accent:#0757b7;--t-bright:#1f2328;
+ --t-code:#edf1f5;--t-glow:rgba(9,105,218,.06);--t-rgb:9,105,218;
+ --t-profile:#24292f;--t-note:#334155;--t-highlight:#0757b7;color-scheme:light;
+}
+html[data-theme="nord-light"]{
+ --t-bg:#eceff4;--t-panel:#e5e9f0;--t-text:#303d50;--t-muted:#42546b;
+ --t-faint:#52627a;--t-line:#b9c5d3;--t-accent:#245e80;--t-bright:#263548;
+ --t-code:#dfe6ee;--t-glow:rgba(36,94,128,.07);--t-rgb:36,94,128;
+ --t-profile:#303d50;--t-note:#3b4b61;--t-highlight:#245e80;color-scheme:light;
+}
+/* Legacy v1-v2 site.css contains fixed pale text and bright gold. These
+   selectors cover the real components, including the nested author card. */
+html[data-theme="solarized-light"] .crt,
+html[data-theme="github-light"] .crt,
+html[data-theme="nord-light"] .crt{opacity:.018!important}
+html[data-theme="solarized-light"] .grain,
+html[data-theme="github-light"] .grain,
+html[data-theme="nord-light"] .grain{opacity:.02!important}
+html:is([data-theme="solarized-light"],[data-theme="github-light"],[data-theme="nord-light"]) .identity-card{
+ background:var(--t-panel)!important;border-color:var(--t-line)!important;
+ border-left-color:var(--t-accent)!important;box-shadow:none!important;
+}
+html:is([data-theme="solarized-light"],[data-theme="github-light"],[data-theme="nord-light"]) .identity-details strong{color:var(--t-profile)!important}
+html:is([data-theme="solarized-light"],[data-theme="github-light"],[data-theme="nord-light"]) .identity-interests{border-top-color:var(--t-line)!important}
+html:is([data-theme="solarized-light"],[data-theme="github-light"],[data-theme="nord-light"]) .identity-interests p,
+html:is([data-theme="solarized-light"],[data-theme="github-light"],[data-theme="nord-light"]) .identity-bio{color:var(--t-profile)!important;opacity:1!important}
+html:is([data-theme="solarized-light"],[data-theme="github-light"],[data-theme="nord-light"]) .identity-interests .prompt,
+html:is([data-theme="solarized-light"],[data-theme="github-light"],[data-theme="nord-light"]) .prompt{color:var(--t-text)!important}
+html:is([data-theme="solarized-light"],[data-theme="github-light"],[data-theme="nord-light"]) .prompt span:first-child,
+html:is([data-theme="solarized-light"],[data-theme="github-light"],[data-theme="nord-light"]) .gold-expression,
+html:is([data-theme="solarized-light"],[data-theme="github-light"],[data-theme="nord-light"]) .prompt .gold-expression{color:var(--t-highlight)!important;text-shadow:none!important}
+html:is([data-theme="solarized-light"],[data-theme="github-light"],[data-theme="nord-light"]) .work-note,
+html:is([data-theme="solarized-light"],[data-theme="github-light"],[data-theme="nord-light"]) .lede,
+html:is([data-theme="solarized-light"],[data-theme="github-light"],[data-theme="nord-light"]) .project>p:not(.subtitle),
+html:is([data-theme="solarized-light"],[data-theme="github-light"],[data-theme="nord-light"]) .book>p:not(.subtitle),
+html:is([data-theme="solarized-light"],[data-theme="github-light"],[data-theme="nord-light"]) .detail-copy p,
+html:is([data-theme="solarized-light"],[data-theme="github-light"],[data-theme="nord-light"]) .passage,
+html:is([data-theme="solarized-light"],[data-theme="github-light"],[data-theme="nord-light"]) .english{color:var(--t-note)!important;opacity:1!important}
+html:is([data-theme="solarized-light"],[data-theme="github-light"],[data-theme="nord-light"]) .response,
+html:is([data-theme="solarized-light"],[data-theme="github-light"],[data-theme="nord-light"]) .section-head i,
+html:is([data-theme="solarized-light"],[data-theme="github-light"],[data-theme="nord-light"]) .footnote{color:var(--t-muted)!important}
+html:is([data-theme="solarized-light"],[data-theme="github-light"],[data-theme="nord-light"]) .response b,
+html:is([data-theme="solarized-light"],[data-theme="github-light"],[data-theme="nord-light"]) .section-head h2,
+html:is([data-theme="solarized-light"],[data-theme="github-light"],[data-theme="nord-light"]) h3{color:var(--t-bright)!important}
+html:is([data-theme="solarized-light"],[data-theme="github-light"],[data-theme="nord-light"]) .tagline,
+html:is([data-theme="solarized-light"],[data-theme="github-light"],[data-theme="nord-light"]) .subtitle,
+html:is([data-theme="solarized-light"],[data-theme="github-light"],[data-theme="nord-light"]) .section-head span,
+html:is([data-theme="solarized-light"],[data-theme="github-light"],[data-theme="nord-light"]) .detail-copy h2{color:var(--t-accent)!important}
+html:is([data-theme="solarized-light"],[data-theme="github-light"],[data-theme="nord-light"]) .project,
+html:is([data-theme="solarized-light"],[data-theme="github-light"],[data-theme="nord-light"]) .book,
+html:is([data-theme="solarized-light"],[data-theme="github-light"],[data-theme="nord-light"]) .about{background:var(--t-panel)!important}
+html:is([data-theme="solarized-light"],[data-theme="github-light"],[data-theme="nord-light"]) .bar,
+html:is([data-theme="solarized-light"],[data-theme="github-light"],[data-theme="nord-light"]) .top{background:var(--t-bg)!important}
+html:is([data-theme="solarized-light"],[data-theme="github-light"],[data-theme="nord-light"]) h1{text-shadow:none!important}
+html:is([data-theme="solarized-light"],[data-theme="github-light"],[data-theme="nord-light"]) .portal-glyph,
+html:is([data-theme="solarized-light"],[data-theme="github-light"],[data-theme="nord-light"]) .georgian-glyph,
+html:is([data-theme="solarized-light"],[data-theme="github-light"],[data-theme="nord-light"]) .greek-glyph,
+html:is([data-theme="solarized-light"],[data-theme="github-light"],[data-theme="nord-light"]) .arabic-glyph{text-shadow:none!important}
+
+/* 3.5: aligned homepage rails and responsive reading layout */
+.home-page .home-section{display:grid;grid-template-columns: minmax(0,145px) minmax(0,1fr);gap:24px;margin:0;padding:40px clamp(20px,5vw,54px);border-bottom:1px solid var(--t-line)!important}
+.home-page .section-head{display:flex;flex-direction:column;align-items:flex-start;gap:6px;margin:0;padding:0;border:0;min-width:0}
+.home-page .section-head i{text-align:left;display:block;overflow-wrap:anywhere}
+.home-page .section-content{min-width:0}
+.home-page .section-content > :first-child{margin-top:0!important}
+.home-page .identity-card{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:start;gap:16px;border-radius:0;box-shadow:inset 2px 0 0 var(--t-accent);padding:clamp(16px,3vw,30px)}
+.home-page .identity-interests{grid-column:1/-1;max-width:none;margin-top:0}
+.home-page .identity-email{overflow-wrap:anywhere}
+.home-page .research-entry{border-bottom:0}
+.home-page .home-section{scroll-margin-top:100px}
+.terminal,.detail-copy,.detail-intro{min-width:0;overflow-wrap:anywhere}
+pre{max-width:100%;overflow-x:auto;overflow-wrap:normal}
+img{max-width:100%}
+a:focus-visible,button:focus-visible,select:focus-visible{outline:2px solid var(--t-accent);outline-offset:3px}
+@media(max-width:700px){
+ .home-page .home-section{grid-template-columns:minmax(0,1fr);gap:18px;padding:28px 18px}
+ .home-page .section-head{display:grid;grid-template-columns:auto 1fr;align-items:center;gap:6px 12px}
+ .home-page .section-head i{grid-column:2}
+ .bar nav a{padding:7px 0}
+ .bar .theme-picker{min-width:0}
+ .theme-picker select{max-width:145px}
+ .project-link,.back-link{min-height:44px;max-width:100%;white-space:normal}
+ .home-page .identity-card .identity-details a{font-size:13px}
+ .home-page .intro h1{font-size:clamp(35px,10vw,60px)}
+}
+@media(max-width:360px){.theme-picker label{display:none}.home-page .identity-card .identity-avatar-link{width:48px;height:48px}.home-page .identity-card{gap:10px}.research-entry{gap:.5rem!important}}
+
+/* 3.6 — full-width Lisp function sections, scoped to the homepage. */
+.home-page .terminal{width:min(1280px,calc(100% - 40px))}
+.home-page .home-section{display:block;padding:36px clamp(20px,4vw,48px)}
+.home-page .section-head{display:block;margin:0 0 18px}
+.home-page .section-head .lisp-heading{font-size:clamp(17px,2vw,23px);letter-spacing:0;font-weight:400;color:var(--t-accent)!important;white-space:nowrap}
+.home-page .section-content{width:100%;min-width:0}
+
+.home-page .section-content .project,.home-page .section-content .book{width:100%;box-sizing:border-box}
+.home-page .project>p:not(.subtitle),.home-page .book>p:not(.subtitle){max-width:100%}
+.home-page .identity-interests p{max-width:100%}
+.home-page .identity-details{min-width:0;overflow-wrap:anywhere}
+.home-page .bar{padding-left:max(18px,calc((100vw - 1280px)/2))!important;padding-right:max(18px,calc((100vw - 1280px)/2))!important}
+@media(max-width:700px){
+ .home-page .terminal{width:100%;border-left:0;border-right:0}
+ .home-page .home-section{padding:28px 16px}
+ .home-page .section-head{margin-bottom:14px}
+ .home-page .section-content .project,.home-page .section-content .book{padding:18px 16px}
+ .home-page .bar{padding:10px 14px!important}
+}
+
+/* 3.8: complete REPL calls, no closing markers. */
+.home-page .section-head .lisp-heading{text-transform:none!important;white-space:normal;overflow-wrap:anywhere}
+.home-page .section-head .lisp-heading::before,.home-page .section-head .lisp-heading::after,.home-page .home-section::after,.home-page .section-content::after{content:none!important}
+.home-page .section-head .lisp-heading .lisp-prompt{font:inherit;color:inherit;margin:0;display:inline}
