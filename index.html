@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="HENOSIS — software, systems, writing, and independent projects by Donald J. Pepper III." name="description"/>
+<title>HENOSIS</title>
+<link href="css/site.css" rel="stylesheet"/>
+<link href="css/themes.css?v=3.8" rel="stylesheet"/><script src="js/theme.js"></script><link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&amp;display=swap" rel="stylesheet"/>
+<link href="css/research.css" rel="stylesheet"/></head>
+<body class="home-page">
+<div aria-hidden="true" class="crt"></div>
+<header class="bar">
+<a class="brand" href="#top"><span class="lambda">λ</span> HENOSIS</a>
+<nav aria-label="Primary navigation">
+<a href="#work">WORK</a>
+<a href="#research">RESEARCH</a>
+<a href="#author">PROFILE</a>
+</nav>
+<div class="theme-picker"><label for="theme-select">THEME</label><select aria-label="Color theme" id="theme-select"><option value="gold">Henosis Gold</option><option value="glitch">Glitch Green</option><option value="zetsieri">Zetsieri</option><option value="gruvbox">Gruvbox</option><option value="monokai">Monokai</option><option value="solarized-light">Solarized Light</option><option value="oblivion">Oblivion</option><option value="github-light">GitHub Light</option><option value="nord-light">Nord Snow</option></select></div><span class="mode">CL · UTF-8</span>
+</header>
+<main class="terminal" id="top">
+<section class="intro">
+<div class="prompt"><span>CL-USER&gt;</span> (load "henosis")</div>
+<p class="response">; loading interconnected systems...</p>
+<p class="response">; status: <b>ONLINE</b></p>
+<h1>HENOSIS<span class="cursor">█</span></h1>
+<p class="tagline">THE UNION OF NOUS AND EIDOS</p>
+<p class="lede">A personal hub for software, systems, research, and independent experiments.</p>
+</section>
+<section aria-label="Author" class="section home-section" id="author"><div class="section-head"><h2 class="lisp-heading"><span class="lisp-prompt">CL-USER&gt; </span>(describe 'profile)</h2></div><div class="section-content">
+<div aria-label="Author and GitHub profile" class="identity identity-card project">
+<a aria-label="Donald J. Pepper III on GitHub" class="identity-avatar-link" href="https://github.com/Vladik-Dracovich" rel="noopener noreferrer" target="_blank">
+<img alt="GitHub profile avatar for Vladik-Dracovich" class="identity-avatar" height="64" loading="eager" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'" referrerpolicy="no-referrer" src="https://github.com/Vladik-Dracovich.png?size=160" width="64"/>
+<span aria-hidden="true" class="identity-avatar-fallback">DP</span>
+</a>
+<div class="identity-details">
+<strong>Donald J. Pepper III</strong>
+<a href="https://github.com/Vladik-Dracovich" rel="noopener noreferrer" target="_blank">github.com/Vladik-Dracovich <span aria-hidden="true">↗</span></a>
+<div class="identity-email">Send me an Email: <a href="mailto:donjp1999@gmail.com">donjp1999@gmail.com</a></div>
+
+</div>
+<div class="identity-interests"><div class="prompt"><span>CL-USER&gt;</span> <span class="gold-expression">(describe 'technical-interests)</span></div>
+<p>Linux systems, programming, independent software, and writing. Current technical interests include Common Lisp, C/C++, Java, Go, Unix-like systems, graphics, and infrastructure.</p><a class="project-link" href="professional.html">PROFESSIONAL SUMMARY <span aria-hidden="true">↗</span></a></div></div>
+</div></section>
+<section class="section home-section" id="work"><div class="section-head"><h2 class="lisp-heading"><span class="lisp-prompt">CL-USER&gt; </span>(list-projects)</h2></div><div class="section-content">
+
+<article class="project">
+<div class="project-meta"><span>COMMON LISP</span><span>DYNAMIC WINDOW MANAGEMENT</span><span class="status">DEVELOPMENT</span></div>
+<h3>MOSS</h3>
+<p class="subtitle">Malleable Object Screen System</p>
+<p>A Common Lisp window manager built around dynamic window control, interactive reconfiguration, and a live Lisp environment in which behavior can be inspected and changed while the system runs.</p>
+<pre>(moss
+  :language 'common-lisp
+  :layout :dynamic
+  :configuration :live
+  :runtime :malleable)</pre>
+<p class="project-private">LOCAL DEVELOPMENT · NOT YET RELEASED</p>
+<a class="project-link" href="projects/moss.html">READ TECHNICAL OVERVIEW <span aria-hidden="true">↗</span></a>
+</article>
+<article class="project">
+<div class="project-meta"><span>GO</span><span>LARAVEL</span><span>S3</span><span class="status">DEVELOPMENT</span></div>
+<h3>ABZU NEXUS</h3>
+<p class="subtitle">Linux-first cloud storage</p>
+<p>An independent cloud storage platform centered on a Go backend, a Laravel/Livewire web interface, and S3-compatible object storage.</p>
+<pre>(abzu-nexus
+  :backend 'go
+  :frontend '(laravel livewire)
+  :storage 's3-compatible
+  :status :development)</pre>
+<p class="project-private">LOCAL DEVELOPMENT · NOT YET RELEASED</p>
+<a class="project-link" href="projects/abzu-nexus.html">READ TECHNICAL OVERVIEW <span aria-hidden="true">↗</span></a>
+</article>
+<article class="project">
+<div class="project-meta"><span>COMMON LISP</span><span>VIM BINDINGS</span><span>SBCL REPL</span><span class="status">DEVELOPMENT</span></div>
+<h3>ZETSIERI</h3>
+<p class="subtitle">A Lisp-native editor and interactive development environment</p>
+<p>A minimalist Common Lisp editor with modal, Vim-style keyboard control and a dedicated SBCL REPL alongside the editing buffer. Zetsieri is designed around the edit–evaluate–inspect workflow, keeping code and live Lisp feedback in one workspace.</p>
+<pre>(zetsieri
+  :implementation 'common-lisp
+  :editing 'vim-style
+  :repl 'sbcl
+  :workspace :interactive)</pre>
+<p class="project-private">INDEPENDENT DEVELOPMENT · RELEASE STATUS NOT ASSERTED</p>
+<a class="project-link" href="projects/zetsieri.html">READ TECHNICAL OVERVIEW <span aria-hidden="true">↗</span></a>
+</article>
+<article class="project">
+<div class="project-meta"><span>JAVA / JVM</span><span>LISP DIALECT</span><span>BYTECODE COMPILER</span><span class="status">DEVELOPMENT</span></div>
+<h3>DRAGONLISP</h3>
+<p class="subtitle">A dynamic Lisp dialect targeting the Java Virtual Machine</p>
+<p>A Java-based Lisp language implementation with dynamic typing by default, optional type declarations, and a compiler architecture that generates JVM instructions directly. The project explores Lisp evaluation semantics, language implementation, and bytecode generation.</p>
+<pre>(dragonlisp
+  :implementation 'java
+  :typing 'dynamic
+  :declarations :optional
+  :target 'jvm-bytecode)</pre>
+<p class="project-private">INDEPENDENT DEVELOPMENT · RELEASE STATUS NOT ASSERTED</p>
+<a class="project-link" href="projects/dragonlisp.html">READ TECHNICAL OVERVIEW <span aria-hidden="true">↗</span></a>
+</article>
+</div></section>
+<section class="section home-section" id="research"><div class="section-head"><h2 class="lisp-heading"><span class="lisp-prompt">CL-USER&gt; </span>(list-research)</h2></div><div class="section-content"><article class="book research"><p>Independent textual research into ancient religions, sacred languages, divine cosmology, and theurgy.</p><div class="research-index"><a class="research-entry" href="research/emanations.html"><span class="research-number">01</span><span><strong>The Book of Emanations</strong><small>Ancient texts, sacred languages, cosmology and theurgy</small></span><span aria-hidden="true">↗</span></a></div></article></div></section>
+<section class="end">
+<div class="prompt"><span>CL-USER&gt;</span> <span class="cursor">█</span></div>
+</section>
+</main>
+<footer>
+<span>HENOSIS</span>
+<span>SBCL-MINDED · STATIC HTML</span>
+</footer>
+<script src="js/site.js"></script>
+</body>
+</html>
